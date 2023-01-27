@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>THREE</title>
+</head>
+<body>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+
+			void main()	{
+
+				vUv = uv;
+				vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+				gl_Position = projectionMatrix * mvPosition;
+
+			}
+    </script>
+    <script id="fragmnetShader" type="x-shader/x-vertex">
+
+    </script>    
+    <video
+        id = "video"
+        playsinline
+        muted
+        loop
+        autoplay
+        style = "display: none">
+
+    </video>
+    <canvas class="webgl"></canvas> 
+    <script type = 'module' src = "./script.js"></script>
+
+    
+    
+</body>
+</html>
