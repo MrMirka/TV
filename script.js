@@ -129,15 +129,15 @@ screen_material = videoaterial
 
 
 //gltfLoader.load('./models/TV_separate.gltf', gltf => {
-gltfLoader.load('./models/scene.gltf', gltf => {
+gltfLoader.load('./models/scene2.gltf', gltf => {
     let model_box = gltf.scene.children[0]
-    let model_screen = gltf.scene.children[2]
-    let model_table = gltf.scene.children[1]
+    let model_screen = gltf.scene.children[1]
+   // let model_table = gltf.scene.children[1]
 
 
     model_box.name = "TV"
     model_screen.name = "TV_screen"
-    model_table.name = "TV_table"
+   // model_table.name = "TV_table"
 
     model_screen.traverse( function( node ) {
         if (node.material) {
@@ -160,16 +160,16 @@ gltfLoader.load('./models/scene.gltf', gltf => {
         }
     })
 
-    model_table.traverse( function( node ) {
-        if (node.isMesh) {
+    //model_table.traverse( function( node ) {
+       // if (node.isMesh) {
            // node.castShadow = true
-            node.receiveShadow = true
-        }
-    })
+           // node.receiveShadow = true
+      //  }
+  //  })
 
     gltf.scene.scale.set(1,1,1)
     screen_mesh = model_screen
-   scene.add(model_box, screen_mesh, model_table)
+   scene.add(model_box, screen_mesh)
     //scene.add(model_box, model_table)
     
 })
