@@ -1,5 +1,5 @@
 import * as THREE from './lib/three/build/three.module.js'
-import { OrbitControls } from './lib/three/examples/jsm/controls/OrbitControls.js'
+//import { OrbitControls } from './lib/three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from './lib/three/examples/jsm/loaders/GLTFLoader.js'
 import { RGBELoader } from './lib/three/examples/jsm/loaders/RGBELoader.js'
 import * as dat from './lib/dat.gui.module.js'
