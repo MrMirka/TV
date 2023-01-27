@@ -17,7 +17,7 @@ let currentVideo = 0
 
 var videoTexture
 let urls = [
-            './models/video/spiderman.mp4',
+          //  './models/video/spiderman.mp4',
             './models/video/bb.mp4',
             './models/video/BB2.mp4',
             null
